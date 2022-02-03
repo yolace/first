@@ -1,0 +1,30 @@
+#include < iostream>
+#include<vector>
+using namespace std;
+int main()
+{    
+	int n;
+	cout << "请键入向量的元素量：";
+	cin >> n;
+	 vector<float> a(n, 0);       //对其中部分元素进行输入
+	 vector<float> b(n, 0);
+	int i;
+	cout << "请键入向量1的元素";
+	for (i = 0; i < n; i++)
+	{
+		cin >> a[i];
+	}
+	cout << "请键入向量2的元素";
+	for (i = 0; i < n; i++)
+	{
+		cin >> b[i];
+	}
+	float dot_product = 0; //设定向量点积
+
+	for (i = 0; i < n; i++)
+	{
+		dot_product += a[i] * b[i];
+	}
+	cout << "两个向量的点积为："<<dot_product;
+      return 0;
+}
